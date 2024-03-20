@@ -524,7 +524,7 @@
 
                             <!-- Thực đơn -->
                             <!-- Phổ biến -->
-                            <div class="tab-pane" id="link6" >
+                            <div class="tab-pane" id="link6">
                                 <div class="row">
                                     <div class="col-3" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
@@ -1534,71 +1534,47 @@
                                     </li>
                                 </ul>
                             </div>
-
+<!-- --------------------------------------------------Danh sách menu-------------------------------------------------- -->
                             <div class="tab-pane" id="link2" >
-                                <ul role="tablist">
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link6" type="button" role="tab">
-                                        <b style="color: #000;">Phổ Biến</b></a>
-                                    </li>
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link7" type="button" role="tab">
-                                        <b style="color: #000;">Bánh Flan</b></a>
-                                    </li>
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link8" type="button" role="tab">
-                                        <b style="color: #000;">Milo</b></a>
-                                    </li>
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link9" type="button" role="tab">
-                                        <b style="color: #000;">Sâm Dứa</b></a>
-                                    </li>
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link10" type="button" role="tab">
-                                        <b style="color: #000;">Sinh Tố</b></a>
-                                    </li>
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link11" type="button" role="tab">
-                                        <b style="color: #000;">Sữa Đậu Nành</b></a>
-                                    </li>
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link12" type="button" role="tab">
-                                        <b style="color: #000;">Sữa Tươi</b></a>
-                                    </li>
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link13" type="button" role="tab">
-                                        <b style="color: #000;">Trà Sữa</b></a>
-                                    </li>
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link14" type="button" role="tab">
-                                        <b style="color: #000;">Trà Trái Cây</b></a>
-                                    </li>
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link15" type="button" role="tab">
-                                        <b style="color: #000;">Soda</b></a>
-                                    </li>
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link16" type="button" role="tab">
-                                        <b style="color: #000;">Sữa Chua Dầm</b></a>
-                                    </li>
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link17" type="button" role="tab">
-                                        <b style="color: #000;">Chè</b></a>
-                                    </li>
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link18" type="button" role="tab">
-                                        <b style="color: #000;">Bánh</b></a>
-                                    </li>
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link19" type="button" role="tab">
-                                        <b style="color: #000;">Topping thêm</b></a>
-                                    </li>
-                                    <li class="nav-item-1">
-                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#link20" type="button" role="tab">
-                                        <b style="color: #000;">Café</b></a>
-                                    </li>
-                                </ul>
+                                <ul id="tabList" role="tablist"></ul>
+                                <!-- ---------------------------------Tạo danh sách menu------------------------------------ -->
+                                <script>
+                                    const apiUrl = 'http://34.101.53.2:8080/posapp/api/list/?tablename=tbl_com_01_01_nhomthucdon';
+                                    // Lấy danh sách tabList từ DOM
+                                    const tabList = document.getElementById("tabList");
+
+                                    // Sử dụng fetch để gửi yêu cầu GET đến API
+                                    fetch(apiUrl)
+                                        .then(response => {
+                                            // Kiểm tra nếu phản hồi không thành công
+                                            if (!response.ok) {
+                                                throw new Error('Không thể lấy dữ liệu từ API');
+                                            }
+                                            // Chuyển đổi dữ liệu JSON từ phản hồi
+                                            return response.json();
+                                        })
+                                        .then(data => {
+                                            // Lặp qua mỗi đối tượng trong mảng dữ liệu
+                                            data.forEach((item, index) => {
+                                                const li = document.createElement("li");
+                                                li.classList.add("nav-item-1");
+                                                const a = document.createElement("a");
+                                                a.classList.add("nav-link");
+                                                a.setAttribute("data-bs-toggle", "tab");
+                                                a.setAttribute("data-bs-target", `#link${index + 6}`);
+                                                a.setAttribute("type", "button");
+                                                a.setAttribute("role", "tab");
+                                                a.innerHTML = `<b style="color: #000;">${item.tennhomsanpham}</b>`;
+                                                li.appendChild(a);
+                                                tabList.appendChild(li);
+                                            });
+                                        })
+                                        .catch(error => {
+                                            console.error('Lỗi:', error);
+                                        });
+                                </script>                                
                             </div>
+<!-- --------------------------------------------------End Danh sách menu-------------------------------------------------- -->
                         </div>
                     </div>
                 </div>
