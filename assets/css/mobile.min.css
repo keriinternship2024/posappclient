@@ -1,0 +1,36 @@
+.wrapper {
+    position: relative;
+    top: 0;
+    height: 100vh;
+}
+.card {
+    border: 0;
+    border-radius: .1875rem;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    background: #f2f2f7;
+}
+.head_dautrang {
+    height: 44px;
+    background: #ff9f00;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+}
+/* Header */
+nav {
+    background: #ffaa34;
+}
+.brand {
+    color: #fff!important;
+    font-size: 16pt!important;
+    font-weight: 700;
+
+}
+.fa {
+    margin-left: 15px;
+    color: #fff;
+    font-size: 14pt!important;
+}
