@@ -115,8 +115,9 @@
             <div class="head_dautrang"></div>
             <div style="height: 42px;"></div>
             
-            <div class="container">
-                <nav class="navbar row">
+            <!-- Start nav -->
+            <nav class="navbar row">
+                <div class="container">
                     <div class="col-2">
                         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
                             aria-controls="offcanvasExample" style="border: 0; padding: 0;">
@@ -127,30 +128,676 @@
                         <a class="navbar-brand brand" href="#">rioshuri</a>
                     </div>
                     <div class="col-4 text-center">
-                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                        <i class="fa fa-bell" aria-hidden="true"></i>
-                        <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                        <i class="fa fa-shopping-basket icon-menu" aria-hidden="true"></i>
+                        <i class="fa fa-bell icon-menu" aria-hidden="true"></i>
+                        <i class="fa fa-angle-double-down icon-menu" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                        <div class="dropdown-menu drop-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Đồng bộ</a>
+                            <a class="dropdown-item" href="#">Mở ca</a>
+                            <a class="dropdown-item" href="#">Đóng ca</a>
+                            <a class="dropdown-item" href="#">Tham gia ca</a>
+                            <a class="dropdown-item" href="#">Lịch sử đóng mở ca</a>
+                            <a class="dropdown-item" href="#">Trạng thái in</a>
+                            <a class="dropdown-item" href="#">Két</a>
+                        </div>
                     </div>
                     
-                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                        <div style="height: 44px;"></div>
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="padding: 0;">
+                        <div style="height: 43px;"></div>
+                        <div class="offcanvas-header head"></div>
                         <div class="offcanvas-body">
-                            <div>
-                                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
-                                etc.
-                            </div>
-                    
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <i class="fa fa-clock-o menu-icons" aria-hidden="true"><span class="icon-title">Đặt hẹn</span></i>
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fa fa-cog menu-icons" aria-hidden="true"><span class="icon-title">Cài đặt chung</span></i>
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fa fa-picture-o menu-icons" aria-hidden="true"><span class="icon-title">Cài đặt hình ảnh</span></i>
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fa fa-list menu-icons" aria-hidden="true"><span class="icon-title">Thêm sản phẩm mặc định</span></i>
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fa fa-bars menu-icons" aria-hidden="true"><span class="icon-title">Chuyển chế độ xem</span></i>
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fa fa-sign-out menu-icons" aria-hidden="true"><span class="icon-title">Rời khỏi</span></i>
+                                </li>
+                              </ul>
                         </div>
                     </div>
-                </nav>
+                </div>
+            </nav>
+            <!-- End nav -->
+            <div class="container">
 
+                <!-- Start content -->
+                <div class="row">
+                    <div class="col-2">
+                        <div class="nav flex-column nav-pills nav-margin" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <button class="nav-link active" id="menu-1-tab" data-toggle="pill" data-target="#menu-1"
+                                type="button" role="tab">
+                                <i class="fa fa-circle" aria-hidden="true" style="color: #ff0000; margin: 0;"></i>
+                            </button>
+                            <button class="nav-link" id="menu-2-tab" data-toggle="pill" data-target="#menu-2"
+                                type="button" role="tab">
+                                <i class="fa fa-circle" aria-hidden="true" style="color: #008000; margin: 0;"></i>
+                            </button>
+                            <button class="nav-link" id="menu-3-tab" data-toggle="pill" data-target="#menu-3"
+                                type="button" role="tab">
+                                <i class="fa fa-circle" aria-hidden="true" style="color: #800080; margin: 0;"></i>
+                            </button>
+                            <button class="nav-link" id="menu-4-tab" data-toggle="pill" data-target="#menu-4"
+                                type="button" role="tab">
+                                <i class="fa fa-circle" aria-hidden="true" style="color: #ffff00; margin: 0;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-10" style="padding: 0;">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="menu-1" role="tabpanel">
+                                <ul class="nav nav-pills mb-3 nav-margin-1" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="table-1-tab" data-toggle="pill" href="#table-1" role="tab">Đang mở</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="table-2-tab" data-toggle="pill" href="#table-2" role="tab">Tầng trệt</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="table-3-tab" data-toggle="pill" href="#table-3" role="tab">Tầng 1</a>
+                                    </li>
+                                </ul>
+                                <div class="line"></div>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="table-1" role="tabpanel">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="table-2" role="tabpanel">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="table-3" role="tabpanel">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                                <div class="col-lg-4 col-md-6 col-6 mb-2">
+                                                    <div class="choose-btn">
+                                                        <div class="title-store">
+                                                            <span>rioshuri</span><i class="fa fa-chevron-right"></i>
+                                                        </div>
+                                                        <div class="store">
+                                                            <p class="table__order">001-Tầng trệt</p>
+                                                            <div class="date">
+                                                                <span>36 ngày</span>
+                                                                <i class="fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ------------------------------------- -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="order.html" class="floating-button">+</a>
+                                <div style="height: 220px;"></div>
+                            </div>
+                            <!-- --------------------------------------------------------------------- -->
+                            <div class="tab-pane fade" id="menu-2" role="tabpanel">B
+                            </div>
+                            <div class="tab-pane fade" id="menu-3" role="tabpanel">C
+                            </div>
+                            <div class="tab-pane fade" id="menu-4" role="tabpanel">D
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End content -->
             </div>
             
         </div>
     </div>
 </body>
+<script>
+    var button = document.querySelector('.floating-button');
+
+    window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+        button.style.display = 'none';
+    } else {
+        button.style.display = 'block';
+    }
+    });
+</script>
 </html>
