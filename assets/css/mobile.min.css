@@ -250,4 +250,52 @@ nav {
 .order-btn {
     width: 100px;
 }
+
+.card-notify-badge {
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    background: #e1e1e1;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color: #000;
+    padding: 5px 10px;
+    font-size: 14px;
+}
 /* End Order */
+
+/* Start info */
+.info-title {
+    margin-bottom: 0;
+}
+.info-btn {
+    width: 150px;
+    margin-bottom: 15px;
+}
+/* End info */
+
+/* Start note */
+.modern-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.modern-input {
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    width: 200px; 
+    background-image: linear-gradient(to right, #ff00cc, #ff00cc);
+    background-position: 0 100%;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s; 
+}
+
+.modern-input:focus {
+    outline: none; 
+    background-size: 0 1px; 
+}
+/* End note */
