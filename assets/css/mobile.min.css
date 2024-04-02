@@ -45,6 +45,9 @@ nav {
     background: #ffaa34;
     height: 58px;
 }
+.offshow {
+    width: 310px !important;
+}
 .menu-icons {
     color: #495057;
     font-size: 16pt !important;
@@ -144,10 +147,6 @@ nav {
     line-height: 47px;
     text-decoration: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-@media screen and (min-width:767px) {
-    
 }
 
 /* Order */
@@ -277,17 +276,15 @@ nav {
 /* Start note */
 .modern-form {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 20px;
 }
 
 .modern-input {
-    padding: 10px;
     border: none;
     font-size: 16px;
-    width: 200px; 
-    background-image: linear-gradient(to right, #ff00cc, #ff00cc);
+    width: 250px; 
+    background-image: linear-gradient(to right, #c0c0c0, #929292);
     background-position: 0 100%;
     background-size: 100% 1px;
     background-repeat: no-repeat;
@@ -298,4 +295,34 @@ nav {
     outline: none; 
     background-size: 0 1px; 
 }
+
+.note-close-btn {
+    font-size: 15pt !important;
+    color: #495057;
+}
 /* End note */
+
+/* ipad pro */
+@media screen and (min-width:767px) {
+    .offshow {
+        width: 600px !important;
+    }
+    .menu-icons {
+        font-size: 28pt !important;
+    }
+    .icon-title {
+        font-size: 18pt;
+    }
+}
+/* ipaad mini & air */
+@media screen and (min-device-width: 481px) and (max-device-width: 820px) {
+    .offshow {
+        width: 500px !important;
+    }
+    .menu-icons {
+        font-size: 28pt !important;
+    }
+    .icon-title {
+        font-size: 18pt;
+    }
+}

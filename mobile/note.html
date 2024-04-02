@@ -113,16 +113,17 @@
             <div class="head_dautrang"></div>
             <div style="height: 42px;"></div>
             <nav class="navbar row">
-                <div class="col-lg-5 col-4">
+                <div class="col-lg-5 col-5">
                     <a href="order.html"><i class="fa fa-times" aria-hidden="true"></i></a>
                 </div>
-                <div class="col-lg-7 col-8">
+                <div class="col-lg-7 col-7">
                     <a class="navbar-brand brand" href="#">Ghi chú</a>
                 </div>
             </nav>
             <div class="container mt-4">
-                <form action="" class="modern-form">
-                    <input list="note" name="browser" id="browser" class="modern-input" placeholder="Chọn gợi ý hoặc nhập văn bản">
+                <form action="" class="modern-form mt-2">
+                    <input list="note" name="browser" id="browser" class="modern-input p-2" placeholder="Chọn gợi ý hoặc nhập">
+                    <i class="fa fa-close note-close-btn" onclick="document.getElementById('browser').value = ''"></i>
                     <datalist id="note">
                         <option value="Ít đường">
                         <option value="Nhiều đường">
@@ -132,6 +133,7 @@
                         <option value="Không đá">
                     </datalist>
                 </form>
+                <button class="btn btn-primary fixed-bottom mb-2 ml-2 mr-2">Đồng ý</button>
             </div>
         </div>
     </div>
