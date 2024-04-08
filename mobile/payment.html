@@ -135,26 +135,52 @@
                     
                 </div>
             </nav>
+            <div class="container">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between">
+                        <p class="mb-0">Tạm tính</p>
+                        <p class="mb-0">35000</p>
+                    </li>   
+                    <li class="list-group-item d-flex justify-content-between">
+                        <p class="mb-0">Giảm giá</p>
+                        <input type="text" class="discount-input text-right" placeholder="0">
+                    </li>   
+                    <li class="list-group-item d-flex justify-content-between">
+                        <p class="mb-0 font-weight-bold">Tổng cộng</p>
+                        <p class="mb-0 font-weight-bold">35000</p>
+                    </li>     
+                </ul>
+    
+                <ul class="nav nav-pills mb-2 mt-2" id="pills-tab" role="tablist">
+                    <li class="nav-item mr-2">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab">Tiền mặt</a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab">Tài khoản</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel">
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-money money-icon mr-2" aria-hidden="true"></i>
+                            <p class="mb-0">Tiền mặt</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel">
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-credit-card credit-icon mr-2" aria-hidden="true"></i>
+                            <p class="mb-0">Tài khoản</p>
+                        </div>
+                    </div>
+                </div>
 
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item d-flex justify-content-between">
-                    <p class="mb-0">Tạm tính</p>
-                    <p class="mb-0">35000</p>
-                </li>   
-                <li class="list-group-item d-flex justify-content-between">
-                    <p class="mb-0">Giảm giá</p>
-                    <p class="mb-0">0</p>
-                </li>   
-                <li class="list-group-item d-flex justify-content-between">
-                    <p class="mb-0">Tổng cộng</p>
-                    <p class="mb-0">35000</p>
-                </li>     
-            </ul>
-
+                <input type="text" class="money-input text-right" placeholder="35000">
+    
+            </div>
             <div class="row">
                 <div class="col-12 text-center fixed-bottom mb-4">
-                    <button type="button" class="btn btn-primary mx-2 order-btn">Lưu</button>
-                    <button type="button" class="btn btn-secondary mx-2 order-btn">Lưu & In</button>
+                    <button type="button" class="btn btn-primary mx-2 payment-btn">In phiếu</button>
+                    <button type="button" class="btn btn-secondary mx-2 payment-btn">Thanh toán</button>
                 </div>
             </div>
         </div>

@@ -27,6 +27,7 @@ body {
     z-index: 9999;
     width: 100%;
 }
+
 /* Header */
 nav {
     background: #ffaa34;
@@ -39,12 +40,20 @@ nav {
 .icon-menu {
     color: #fff;
     font-size: 14pt!important;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 .icon-menu-1 {
     color: #000;
     font-size: 14pt!important;
     margin-right: 15px;
+}
+.money-icon {
+    color: #008000;
+    font-size: 14pt;
+}
+.credit-icon {
+    color: #929292;
+    font-size: 14pt;
 }
 .head {
     background: #ffaa34;
@@ -58,12 +67,12 @@ nav {
     font-size: 16pt !important;
 }
 .drop-menu {
-    top: 170% !important;
-    left: -20% !important;
+    top: 160% !important;
+    left: -37% !important;
 }
 .drop-menu-1 {
-    top: 170% !important;
-    left: 25% !important;
+    top: 164% !important;
+    left: 13% !important;
 }
 .icon-title {
     color: #000;
@@ -86,6 +95,7 @@ nav {
     border: 1px solid #000 !important;
     margin-bottom: 5% !important;
     box-shadow: 2px 3px #888888;
+    font-size: 9pt !important;
 }
 .menu-box1 { 
     color: #000 !important;
@@ -107,7 +117,7 @@ nav {
 /* Start Content */
 .choose-btn {
     border: 1px solid #ccc;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 .title-store {
     font-family: "Roboto", sans-serif;
@@ -115,7 +125,7 @@ nav {
     align-items: center;
     justify-content: space-around;
     background: #e1e1e1;
-    border-radius: 15px 15px 0 0;
+    border-radius: 10px 10px 0 0;
     color: #5f603e;
 }
 .date {
@@ -124,7 +134,7 @@ nav {
     align-items: center;
     justify-content: space-around;
     background: #f1f3cb;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 10px 10px;
     font-size: 10pt;
     font-weight: 300;
 }
@@ -271,7 +281,11 @@ nav {
     margin-bottom: 20%;
 }
 .order-btn {
-    width: 100px;
+    width: 96px;
+}
+
+.payment-btn {
+    width: 150px;
 }
 
 .card-notify-badge {
@@ -337,6 +351,34 @@ nav {
     transition: background-size 0.3s; 
 }
 
+.discount-input {
+    border: none;
+    font-size: 16px;
+    width: 150px;
+    background-image: linear-gradient(to right, #c0c0c0, #929292);
+    background-position: 0 100%;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s;
+    position: relative;
+}
+
+.money-input {
+    border: none;
+    font-size: 16px;
+    width: 150px;
+    background-image: linear-gradient(to right, #c0c0c0, #929292);
+    background-position: 0 100%;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s;
+    position: relative;
+    bottom: 26px;
+    left: 53%;
+}
+
+.money-input:focus,
+.discount-input:focus,
 .modern-input:focus {
     outline: none; 
     background-size: 0 1px; 
@@ -348,27 +390,133 @@ nav {
 }
 /* End note */
 
-/* ipad pro */
-@media screen and (min-width:767px) {
+/* ipaad pro */
+@media screen and (min-width: 1024px) {
+    .brand {
+        margin-left: 3% !important;
+        font-size: 24pt !important;
+    }
+    .icon-menu {
+        font-size: 22pt !important;
+        margin-left: 20px;
+    }
+    .icon-menu-1 {
+        font-size: 20pt !important;
+    }
+    .drop-title {
+        font-size: 18pt;
+    }
+    .drop-menu {
+        top: 176% !important;
+        left: 30% !important;
+    }
+    .drop-menu-1 {
+        left: 60% !important;
+    }
+    .dropdown-item {
+        font-size: 18pt !important;
+    }
+    .menu-box {
+        font-size: 17pt !important;
+    }
+    .menu-box1 {
+        font-size: 20pt !important;
+    }
+    .title-store {
+        font-size: 18pt;
+    }
+    .table__order {
+        height: 60px;
+        font-size: 18pt;
+    }
+    .date {
+        font-size: 14pt;
+    }
     .offshow {
-        width: 600px !important;
+        width: 550px !important;
     }
     .menu-icons {
-        font-size: 28pt !important;
+        font-size: 26pt !important;
     }
     .icon-title {
-        font-size: 18pt;
+        font-size: 22pt;
+    }
+    .floating-button {
+        width: 80px;
+        height: 80px;
+        font-size: 40pt;
+        line-height: 65px;
+    }
+    .menu-img {
+        height: 150px !important;
+    }
+    #ads .card-notify-badge {
+        font-size: 16px;
+    }
+    .order-btn {
+        width: 150px;
+        font-size: 16pt !important;
     }
 }
-/* ipaad mini & air */
-@media screen and (min-device-width: 481px) and (max-device-width: 820px) {
+
+/* ipad mini & air */
+@media screen and (min-width: 450px) and (max-width:820px) {
+    .brand {
+        margin-left: 3% !important;
+        font-size: 20pt !important;
+    }
+    .icon-menu {
+        font-size: 17pt !important;
+        margin-left: 20px;
+    }
+    .icon-menu-1 {
+        font-size: 17pt !important;
+    }
+    .drop-title {
+        font-size: 16pt;
+    }
+    .drop-menu {
+        top: 176% !important;
+        left: 15% !important;
+    }
+    .drop-menu-1 {
+        top: 165% !important;
+        left: 58% !important;
+    }
+    .menu-box1 {
+        font-size: 16pt !important;
+    }
+    .menu-box {
+        font-size: 14pt !important;
+    }
+    .title-store {
+        font-size: 14pt;
+    }
+    .table__order {
+        height: 50px;
+        font-size: 14pt;
+    }
+    .date {
+        font-size: 12pt;
+    }
     .offshow {
-        width: 500px !important;
+        width: 520px !important;
     }
     .menu-icons {
-        font-size: 28pt !important;
+        font-size: 24pt !important;
+        margin-top: 5px;
     }
     .icon-title {
         font-size: 18pt;
+    }
+    .menu-img {
+        height: 200px !important;
+    }
+    #ads .card-notify-badge {
+        font-size: 16px;
+    }
+    .order-btn {
+        width: 130px;
+        font-size: 16pt !important;
     }
 }
