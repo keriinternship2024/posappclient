@@ -776,52 +776,11 @@ width:70%
     border-radius: 4px;
   }
   
-  @media screen and (max-width:768px){
-    #nav {
-        position: fixed;
-        left: 0;
-        height: 60px;
-        bottom: 0;
-        width: 100%;
-        background-color: #ffffff;
-        color: white;
-        text-align: center; 
-        border-radius: 20px 20px 0px 0px;
-        border: 1px solid #0565AF;
+@media screen and (min-width:1024px){
+    .tab-btn li {
+        min-width: 240px;
     }
-    
-    #nav > ul {
-      list-style: none;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 0;
-      height: 100%;
-    }
-    
-    #nav > ul > li {
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    #nav > ul > li > a {
-      text-decoration: none;
-      color: #121212;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    #nav > ul > li > a > ion-icon {
-      display: block;
-    }
-    
-    #nav > ul > li > a > span {
-    color:red;
-    }
-  }
+}
 
 
 

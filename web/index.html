@@ -177,10 +177,6 @@
                                 <div class="icon-btn">
                                     <i class="fa fa-ticket"> 102</i>
                                 </div>
-                                <div id="content">
-                                    <!-- Nội dung thay đổi sẽ hiển thị ở đây -->
-                                </div>
-                                
                             </div>
                         </div>
 
@@ -377,21 +373,7 @@
                             <!-- Đặt bàn -->
                             <div class="tab-pane show active" id="link3" role="tablist">
                                 <div class="row">
-                                    
-                                    <button class="choose-btn" data-name="Quận 1">
-                                        <div class="head-service"> 
-                                            Quận 1
-                                            <i class="fa fa-angle-right"></i> 
-                                        </div> 
-                                        <div class="service"> 
-                                            <h6>101</h6> 
-                                            <p>2 tháng trước</p> 
-                                        </div> 
-                                    </button>
-                                    <button class="choose-btn" data-name="Quận 2">Quận 2</button>
-                                    <button class="choose-btn" data-name="Quận 3">Quận 3</button>
-
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Tạo bàn nhanh </p>
@@ -408,7 +390,7 @@
                                             return await response.json();
                                         }
                                         async function buildDanhsachBan(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;"> \n\
                                                                         <div class="choose-btn" data-name="{0}"> \n\
                                                                             <div class="head-service"> \n\
                                                                                 {0} \n\
@@ -454,7 +436,7 @@
                                         }
 
                                         async function buildDanhsachBan1(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service"> \n\
                                                                                 {0} \n\
@@ -502,7 +484,7 @@
                                         }
 
                                         async function buildDanhsachBan2(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service"> \n\
                                                                                 {0} \n\
@@ -545,7 +527,7 @@
                             <!-- Phổ biến -->
                             <div class="tab-pane" id="link6">
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -553,7 +535,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -571,7 +553,7 @@
                                         }
 
                                         async function buildDanhsachMon1(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
@@ -611,7 +593,7 @@
                             <!-- Bánh Flan -->
                             <div class="tab-pane" id="link7" >
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -619,7 +601,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -637,7 +619,7 @@
                                         }
 
                                         async function buildDanhsachMon2(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
@@ -677,7 +659,7 @@
                             <!-- Milo -->
                             <div class="tab-pane" id="link8" >
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -685,7 +667,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -703,7 +685,7 @@
                                         }
 
                                         async function buildDanhsachMon3(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
@@ -743,7 +725,7 @@
                             <!-- Sâm dứa -->
                             <div class="tab-pane" id="link9" >
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -751,7 +733,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -769,7 +751,7 @@
                                         }
 
                                         async function buildDanhsachMon4(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
@@ -809,7 +791,7 @@
                             <!-- Sinh tố -->
                             <div class="tab-pane" id="link10" >
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -817,7 +799,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -835,7 +817,7 @@
                                         }
 
                                         async function buildDanhsachMon5(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
@@ -875,7 +857,7 @@
                             <!-- Sữa đậu nành -->
                             <div class="tab-pane" id="link11" >
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -883,7 +865,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -901,7 +883,7 @@
                                         }
 
                                         async function buildDanhsachMon6(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
@@ -941,7 +923,7 @@
                             <!-- Sữa tươi -->
                             <div class="tab-pane" id="link12" >
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -949,7 +931,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -967,7 +949,7 @@
                                         }
 
                                         async function buildDanhsachMon7(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
@@ -1007,7 +989,7 @@
                             <!-- Trà Sữa -->
                             <div class="tab-pane" id="link13" >
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -1015,7 +997,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -1033,7 +1015,7 @@
                                         }
 
                                         async function buildDanhsachMon8(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
@@ -1073,7 +1055,7 @@
                             <!-- Trà trái cây -->
                             <div class="tab-pane" id="link14" >
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -1081,7 +1063,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -1099,7 +1081,7 @@
                                         }
 
                                         async function buildDanhsachMon9(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
@@ -1139,7 +1121,7 @@
                             <!-- Soda -->
                             <div class="tab-pane" id="link15" >
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -1147,7 +1129,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -1165,7 +1147,7 @@
                                         }
 
                                         async function buildDanhsachMon10(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
@@ -1205,7 +1187,7 @@
                             <!-- Sữa chua dầm -->
                             <div class="tab-pane" id="link16" >
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -1213,7 +1195,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -1231,7 +1213,7 @@
                                         }
 
                                         async function buildDanhsachMon11(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
@@ -1271,7 +1253,7 @@
                             <!-- Chè -->
                             <div class="tab-pane" id="link17" >
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -1279,7 +1261,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -1297,7 +1279,7 @@
                                         }
 
                                         async function buildDanhsachMon12(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
@@ -1337,7 +1319,7 @@
                             <!-- Bánh -->
                             <div class="tab-pane" id="link18" >
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -1345,7 +1327,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -1363,7 +1345,7 @@
                                         }
 
                                         async function buildDanhsachMon13(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
@@ -1403,7 +1385,7 @@
                             <!-- Topping thêm -->
                             <div class="tab-pane" id="link19" >
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -1411,7 +1393,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -1429,7 +1411,7 @@
                                         }
 
                                         async function buildDanhsachMon14(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
@@ -1469,7 +1451,7 @@
                             <!-- Café -->
                             <div class="tab-pane" id="link20" >
                                 <div class="row">
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Thêm nhanh </p>
@@ -1477,7 +1459,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-3" style="padding: 10px; margin: 0;">
+                                    <div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;">
                                         <div class="choose-btn">
                                             <div class="create-btn">
                                                 <p>Mức giá </p>
@@ -1495,7 +1477,7 @@
                                         }
 
                                         async function buildDanhsachMon15(jsonData) {
-                                            var templateItemParams = '<div class="col-3" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
+                                            var templateItemParams = '<div class="col-lg-4 col-md-4 col-4" style="padding: 10px; margin: 0;" data-toggle="modal" data-target="#exampleModalCenter"> \n\
                                                                         <div class="choose-btn"> \n\
                                                                             <div class="head-service-menu"> \n\
                                                                                 <img src="../assets/img/{0}" alt="menu"> \n\
