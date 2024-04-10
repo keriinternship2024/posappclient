@@ -451,11 +451,35 @@ nav {
         height: 150px !important;
     }
     #ads .card-notify-badge {
-        font-size: 16px;
+        font-size: 19pt;
     }
     .order-btn {
-        width: 150px;
-        font-size: 16pt !important;
+        width: 200px;
+        font-size: 20pt !important;
+    }
+    .ad-title p {
+        font-size: 18pt;
+    }
+    .floating-button-1 {
+        width: 80px;
+        height: 80px;
+        font-size: 39pt;
+    }
+    .cart-title {
+        font-size: 18pt;
+    }
+    .price-1,
+    .price-2 {
+        font-size: 18pt;
+    }
+    .plus-btn, .minus-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 21pt;
+        font-weight: 700;
+    }
+    .quantity-field-1 {
+        font-size: 21pt;
     }
 }
 
@@ -518,5 +542,19 @@ nav {
     .order-btn {
         width: 130px;
         font-size: 16pt !important;
+    }
+    .cart-title {
+        font-size: 16pt;
+    }
+    .price-1,
+    .price-2 {
+        font-size: 14pt;
+    }
+    .plus-btn, .minus-btn {
+        width: 40px;
+        height: 40px;
+    }
+    .quantity-field-1 {
+        font-size: 15pt;
     }
 }
