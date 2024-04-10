@@ -390,6 +390,34 @@ nav {
 }
 /* End note */
 
+/* order list */
+.menu-card {
+    border: 1px solid #EDEDED;
+    border-radius: 10px;
+    box-shadow: 4px 4px;
+}
+.menu-card-icon-bg {
+    background: #F2F2F2;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 5px 0px 0px 5px;
+}
+.menu-card-icon {
+    position: relative;
+    top: 9px;
+    left: 11px;
+    font-size: 16pt !important;
+}
+.order-list-title {
+    font-weight: 700;
+}
+.order-list-title-3 {
+    color: #d2691e;
+    font-weight: 700;
+}
+/* end order list */
+
 /* ipaad pro */
 @media screen and (min-width: 1024px) {
     .brand {
@@ -481,6 +509,24 @@ nav {
     .quantity-field-1 {
         font-size: 21pt;
     }
+    .order-list-title,
+    .order-list-time,
+    .order-list-title-1,
+    .order-list-title-2,
+    .order-list-title-3 {
+        font-size: 17pt;
+    }
+    .menu-card-icon-bg {
+        width: 60px;
+        height: 60px;
+        border-radius: 15px;
+        margin: 5px 0px 0px 20px;
+    }
+    .menu-card-icon {
+        top: 11px;
+        left: 14px;
+        font-size: 20pt !important;
+    }
 }
 
 /* ipad mini & air */
@@ -556,5 +602,23 @@ nav {
     }
     .quantity-field-1 {
         font-size: 15pt;
+    }
+    .order-list-title,
+    .order-list-time,
+    .order-list-title-1,
+    .order-list-title-2,
+    .order-list-title-3 {
+        font-size: 15pt;
+    }
+    .menu-card-icon-bg {
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+        margin: 5px 0px 0px 20px;
+    }
+    .menu-card-icon {
+        top: 11px;
+        left: 14px;
+        font-size: 20pt !important;
     }
 }
